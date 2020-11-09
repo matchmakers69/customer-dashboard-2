@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<request api="3.0" source="2">
+    {{#data}}
+    <insurance_list>
+        {{#insurance}}
+        <insurance insurance_id="{{insurance_id}}" pax_id="{{pax_id}}">
+            <disclaimers_list>
+                {{#disclaimers}}
+                <disclaimer handle="{{handle}}" value="{{value}}">
+                    <![CDATA[{{{content}}}]]>
+                </disclaimer>
+                {{/disclaimers}}
+            </disclaimers_list>
+        </insurance>
+        {{/insurance}}
+    </insurance_list>
+    {{/data}}
+</request>

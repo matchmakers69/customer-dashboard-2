@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<request api="3.0">
+    {{#data}}
+    <pax_list>
+        {{#pax}}
+        <pax id="{{id}}" {{#sex}}sex="{{sex}}"{{/sex}} {{#gender}}gender="{{gender}}"{{/gender}} {{#customer_id}}customer_id="{{customer_id}}"{{/customer_id}} {{#customer_type}}customer_type="{{customer_type}}"{{/customer_type}} {{#pax_type}}type="{{pax_type}}"{{/pax_type}}>
+            <title><![CDATA[{{title}}]]></title>
+            <first_name><![CDATA[{{first_name}}]]></first_name>
+            <last_name><![CDATA[{{last_name}}]]></last_name>
+            <email><![CDATA[{{email}}]]></email>
+            <social_media_id><![CDATA[{{social_media_id}}]]></social_media_id>
+            <telephone><![CDATA[{{telephone}}]]></telephone>
+            <date_of_birth iso_value="{{date_of_birth}}"/>
+            {{#address}}
+            <address type="{{type}}">
+                <address_1><![CDATA[{{address_1}}]]></address_1>
+                <address_2><![CDATA[{{address_2}}]]></address_2>
+                <address_3><![CDATA[{{address_3}}]]></address_3>
+                <city><![CDATA[{{city}}]]></city>
+                <county><![CDATA[{{county}}]]></county>
+                <post_code><![CDATA[{{post_code}}]]></post_code>
+                <country code="{{country_code}}" />
+            </address>
+            {{/address}}
+            {{#emergency_contact}}
+            <emergency_contact>
+                <full_name><![CDATA[{{full_name}}]]></full_name>
+                <telephone><![CDATA[{{telephone}}]]></telephone>
+            </emergency_contact>
+            {{/emergency_contact}}
+            {{#passport}}
+            <passport number="{{number}}" expiry_date="{{expiry_date}}">
+                <full_name><![CDATA[{{full_name}}]]></full_name>
+                <first_name><![CDATA[{{first_name}}]]></first_name>
+                <middle_names><![CDATA[{{middle_names}}]]></middle_names>
+                <last_name><![CDATA[{{last_name}}]]></last_name>
+                <nationality><![CDATA[{{nationality}}]]></nationality>
+                <country_of_issue code="{{country_code}}"/>
+            </passport>
+            {{/passport}}
+            <medical_requirements><![CDATA[{{medical_requirements}}]]></medical_requirements>
+            <membership_number><![CDATA[{{membership_number}}]]></membership_number>
+        </pax>
+        {{/pax}}
+    </pax_list>
+    {{/data}}
+</request>

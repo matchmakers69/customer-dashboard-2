@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<request api="3.0">
+    {{#data}}
+    <basket currency_id="{{currency_id}}" package_id="{{package_id}}" agent_id="{{agent_id}}">
+        {{#pax}}
+        <pax adults="{{adults}}" children="{{children}}" infants="{{infants}}" />
+        {{/pax}}
+    </basket>
+    {{/data}}
+</request>

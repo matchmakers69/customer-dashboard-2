@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<request api="3.0" source="2">
+    {{#data}}
+    <discount_code_list>
+        {{#discounts}}
+        <discount_code code="{{.}}" />
+        {{/discounts}}
+    </discount_code_list>
+    {{/data}}
+</request>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<request api="3.0">
+    {{#data}}
+    <ticket_list>
+        {{#tickets}}
+            <ticket id="{{.}}" />
+        {{/tickets}}
+    </ticket_list>
+    {{/data}}
+</request>

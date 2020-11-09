@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {{#gtm_container_id}}
+            <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','{{gtm_container_id}}');</script>
+        {{/gtm_container_id}}
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta name="theme-color" content="#EA5557">
+        <meta name="msapplication-navbutton-color" content="#EA5557">
+        <meta name="apple-mobile-web-app-status-bar-style" content="#EA5557">
+        <title>Kaboodle Customer Dashboard</title>
+
+        <link rel="icon" type="image/x-icon" href="https://s3-eu-west-1.amazonaws.com/kaboodlecdn/Kaboodle/favicon.ico">
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700" rel="stylesheet">
+        {{#manifest.css}}
+        <link href="{{file}}?{{release_tag}}" type="text/css" rel="stylesheet" id="styles" />
+        {{/manifest.css}}
+    </head>
+    <body>
+        {{#gtm_container_id}}
+            <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{gtm_container_id}}"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        {{/gtm_container_id}}
+        <div id="app"></div>
+        <div id="modal-root"></div>
+
+        <script src="https://js.stripe.com/v3/" id="stripe-js" async></script>
+
+        {{#manifest.js}}
+            <script src="{{file}}?{{release_tag}}"></script>
+        {{/manifest.js}}
+    </body>
+
+    <!-- DAS2 {{release_tag}} -->
+</html>
+

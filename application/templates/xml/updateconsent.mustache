@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<request api="3.0">
+    {{#data}}
+    <consent_list>
+        {{#consent}}
+        <consent id="{{id}}" pax_id="{{pax_id}}" handle="{{handle}}" mandatory="{{mandatory}}" checked="{{checked}}" is_optout="{{is_optout}}">
+            {{#other_information}}<other_information><![CDATA[{{other_information}}]]></other_information>{{/other_information}}
+        </consent>
+        {{/consent}}
+    </consent_list>
+    {{/data}}
+</request>

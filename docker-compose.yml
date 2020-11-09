@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  dashboard:
+    build: .
+    container_name: ${CONTAINER_PREFIX}_dashboard
+    environment:
+      XDEBUG_CONFIG: remote_connect_back=1
+      CLIENT_ID: ${CLIENT_ID}
+    ports:
+      - "${DASHBOARD_PORT}:80"
+    volumes:
+      - .:/dashboard

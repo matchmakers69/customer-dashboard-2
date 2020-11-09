@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<request api="3.0" request_uri="customer">
+    {{#data}}
+    <customer{{#customer_type}} type="{{customer_type}}"{{/customer_type}}>
+        {{#email}}<email><![CDATA[{{email}}]]></email>{{/email}}
+        {{#password}}<password><![CDATA[{{password}}]]></password>{{/password}}
+        {{#personal_details}}
+        <personal_details{{#sex}} sex="{{sex}}"{{/sex}}{{#gender}} gender="{{gender}}"{{/gender}}{{#date_of_birth}} date_of_birth="{{date_of_birth}}"{{/date_of_birth}}>
+            {{#title}}<title><![CDATA[{{title}}]]></title>{{/title}}
+            {{#first_name}}<first_name><![CDATA[{{first_name}}]]></first_name>{{/first_name}}
+            {{#last_name}}<last_name><![CDATA[{{last_name}}]]></last_name>{{/last_name}}
+            {{#telephone}}<telephone><![CDATA[{{telephone}}]]></telephone>{{/telephone}}
+        </personal_details>
+        {{/personal_details}}
+        {{#bank_account}}
+        <bank_account id="{{id}}" number="{{number}}" sort_code="{{sort_code}}" {{#iban}}iban="{{iban}}"{{/iban}}>
+            <name><![CDATA[{{name}}]]></name>
+        </bank_account>
+        {{/bank_account}}
+        {{#passport}}
+        <passport number="{{number}}" expiry_date="{{expiry_date}}">
+            <full_name><![CDATA[{{full_name}}]]></full_name>
+            <country_of_issue code="{{country_code}}"/>
+            <nationality><![CDATA[{{nationality}}]]></nationality>
+        </passport>
+        {{/passport}}
+        {{#emergency_contact}}
+        <emergency_contact>
+            <full_name><![CDATA[{{full_name}}]]></full_name>
+            <telephone><![CDATA[{{telephone}}]]></telephone>
+        </emergency_contact>
+        {{/emergency_contact}}
+        {{#address}}
+        <address id="{{id}}" type="{{type_id}}">
+            <address_1><![CDATA[{{address_1}}]]></address_1>
+            <address_2><![CDATA[{{address_2}}]]></address_2>
+            <address_3><![CDATA[{{address_3}}]]></address_3>
+            <city><![CDATA[{{city}}]]></city>
+            <county><![CDATA[{{county}}]]></county>
+            <post_code><![CDATA[{{post_code}}]]></post_code>
+            <country code="{{country_code}}" id="{{country_id}}"/>
+        </address>
+        {{/address}}
+        {{#ssrs.0}}
+            <ssr_list>
+                {{#ssrs}}
+                    <ssr id="{{.}}" />
+                {{/ssrs}}
+            </ssr_list>
+        {{/ssrs.0}}
+    </customer>
+    {{/data}}
+</request>

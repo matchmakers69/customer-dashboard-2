@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<request api="3.0" source="2">
+    {{#data}}
+    <ticket_list>
+        {{#tickets}}
+        <ticket event_id="{{event_id}}" class_id="{{class_id}}" type_id="{{type_id}}" pax_id="{{pax_id}}" />
+        {{/tickets}}
+    </ticket_list>
+    {{/data}}
+</request>

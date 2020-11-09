@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<request api="3.0" request_uri="payment">
+    {{#data}}
+    <payment type="5">
+        {{#token}}<token type="{{type}}"><![CDATA[{{token}}]]></token>{{/token}}
+        {{#payment_method}}<payment_method><![CDATA[{{payment_method}}]]></payment_method>{{/payment_method}}
+        {{#payment_intent}}<payment_intent><![CDATA[{{payment_intent}}]]></payment_intent>{{/payment_intent}}
+        <booking id="{{bookingId}}" pax_id="{{bookingPax}}" />
+        <card {{#card_number}}number="{{card_number}}"{{/card_number}} {{#issue}}issue="{{issue}}"{{/issue}} {{#cvv}}cvv="{{cvv}}"{{/cvv}}>
+            {{#brand}}<brand><![CDATA[{{brand}}]]></brand>{{/brand}}
+            {{#start_date}}<start_date month="{{month}}" year="{{year}}"/>{{/start_date}}
+            {{#expiry_date}}<expiry_date month="{{exp_month}}" year="{{exp_year}}"/>{{/expiry_date}}
+            <cardholder_name><![CDATA[{{cardholder_name}}]]></cardholder_name>
+            <cardholder_address1><![CDATA[{{line1}}]]></cardholder_address1>
+            <cardholder_address2><![CDATA[{{line2}}]]></cardholder_address2>
+            <cardholder_city><![CDATA[{{city}}]]></cardholder_city>
+            <cardholder_postcode><![CDATA[{{postal_code}}]]></cardholder_postcode>
+            <cardholder_country code="{{country}}" />
+        </card>
+        {{#payment_amount}}<value payment_amount="{{payment_amount}}" />{{/payment_amount}}
+    </payment>
+    {{/data}}
+</request>

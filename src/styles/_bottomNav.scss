@@ -1,0 +1,13 @@
+.BottomNavContainer {
+  height: 4.2rem;
+
+  .BottomNavLink {
+    display: block;
+    width: 100%;
+  }
+
+  .BottomNav {
+    position: fixed;
+    bottom: 0;
+  }
+}

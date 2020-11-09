@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<request api="3.0" source="2">
+    {{#data}}
+    <delivery_list>
+        {{#delivery}}
+        <delivery option_id="{{option_id}}" pax_id="{{pax_id}}">
+            <address id="{{address_id}}" type="{{address_type}}">
+                <address_1><![CDATA[{{address_1}}]]></address_1>
+                <address_2><![CDATA[{{address_2}}]]></address_2>
+                <address_3><![CDATA[{{address_3}}]]></address_3>
+                <city><![CDATA[{{city}}]]></city>
+                <county><![CDATA[{{county}}]]></county>
+                <post_code><![CDATA[{{postcode}}]]></post_code>
+                <country code="{{country_code}}"><![CDATA[{{country}}]]></country>
+            </address>
+        </delivery>
+        {{/delivery}}
+    </delivery_list>
+    {{/data}}
+</request>

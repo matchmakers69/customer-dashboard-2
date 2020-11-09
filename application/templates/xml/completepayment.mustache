@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<request api="3.0" request_uri="pay">
+    {{#data}}
+    <payment location="{{location}}">
+        <md><![CDATA[{{md}}]]></md>
+        <pares><![CDATA[{{pares}}]]></pares>
+    </payment>
+    {{/data}}
+</request>

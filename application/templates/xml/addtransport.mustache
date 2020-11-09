@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<request api="3.0" source="2">
+    {{#data}}
+    <transport_list>
+        {{#transport}}
+        <transport route_id="{{route_id}}" pax_id="{{pax_id}}">
+            <leg_list>
+                {{#legs}}
+                <leg id="{{id}}" type_id="{{type_id}}" stop_id="{{stop_id}}" />
+                {{/legs}}
+            </leg_list>
+        </transport>
+        {{/transport}}
+    </transport_list>
+    {{/data}}
+</request>

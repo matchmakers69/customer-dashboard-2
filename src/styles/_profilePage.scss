@@ -1,0 +1,33 @@
+.ProfileBackButton {
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  padding: 0.5rem;
+  display: inline-block;
+  margin: 0 0 1rem;
+
+  &:hover {
+    color: #111;
+    transition: 150ms linear box-shadow;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.06);
+    cursor: pointer;
+  }
+}
+
+.ProfileUpdateForm__header,
+.PageHeader {
+  margin: 0.5rem 0;
+}
+
+.ProfileUpdateForm__description {
+  color: #555;
+  margin: 0 0 1rem;
+}
+
+.ProfileUpdateForm__row {
+  padding: 0.5rem 0;
+}
+
+.ProfileUpdateForm__actions {
+  margin-top: 1rem;
+  display: block;
+}

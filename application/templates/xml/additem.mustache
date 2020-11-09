@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<request api="3.0" source="2">
+    {{#data}}
+    <pax_list>
+        {{#pax}}
+        <pax type="{{type}}"/>
+        {{/pax}}
+    </pax_list>
+    <ticket_list>
+        {{#tickets}}
+        <ticket event_id="{{event_id}}" class_id="{{class_id}}" type_id="{{type_id}}" pax_id="{{pax_id}}" />
+        {{/tickets}}
+    </ticket_list>
+    <accommodation_list>
+        {{#accommodations}}
+        <accommodation id="{{id}}" accommodation_id="{{accomm_id}}" room_id="{{room_id}}" room_type_id="{{room_type_id}}">
+            <period start_date="{{start_date}}" end_date="{{end_date}}" nights="{{nights}}"/>
+            <pax_list>
+                {{#pax}}
+                <pax id="{{.}}"/>
+                {{/pax}}
+            </pax_list>
+        </accommodation>
+        {{/accommodations}}
+    </accommodation_list>
+    <transport_list>
+        {{#transport}}
+        <transport route_id="{{route_id}}" pax_id="{{pax_id}}">
+            <leg_list>
+                {{#legs}}
+                <leg id="{{id}}" type_id="{{type_id}}" stop_id="{{stop_id}}" />
+                {{/legs}}
+            </leg_list>
+        </transport>
+        {{/transport}}
+    </transport_list>
+    <extra_list>
+        {{#extras}}
+        <extra extra_id="{{extra_id}}" pax_id="{{pax_id}}">
+            <group id="{{group_id}}" />
+            <option id="{{option_id}}" />
+            {{#info}}<info>{{info}}</info>{{/info}}
+        </extra>
+        {{/extras}}
+    </extra_list>
+    <insurance_list>
+        {{#insurance}}
+        <insurance insurance_id="{{insurance_id}}" pax_id="{{pax_id}}"/>
+        {{/insurance}}
+    </insurance_list>
+    <discount_code_list>
+        {{#discounts}}
+        <discount_code code="{{code}}">
+            <pax_list>
+            {{#pax}}
+                <pax id="{{id}}"/>
+            {{/pax}}
+            </pax_list>
+        </discount_code>
+        {{/discounts}}
+    </discount_code_list>
+    <delivery_list>
+        {{#delivery_option}}
+        <delivery option_id="{{delivery_option_id}}" pax_id="{{pax_id}}">
+            <address {{#address_id}}id="{{address_id}}"{{/address_id}} type="{{type_id}}">
+                <address_1><![CDATA[{{address_1}}]]></address_1>
+                {{#address_2}}<address_2><![CDATA[{{address_2}}]]></address_2>{{/address_2}}
+                {{#address_3}}<address_3><![CDATA[{{address_3}}]]></address_3>{{/address_3}}
+                <city><![CDATA[{{city}}]]></city>
+                {{#post_code}}<post_code><![CDATA[{{post_code}}]]></post_code>{{/post_code}}
+                <country code="{{country_code}}"/>
+            </address>
+        </delivery>
+        {{/delivery_option}}
+    </delivery_list>
+    {{/data}}
+</request>

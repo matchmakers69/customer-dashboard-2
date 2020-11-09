@@ -1,0 +1,19 @@
+export const PAYMENT_PLAN_UPDATE_REQUIRES_ACTION =
+  'dashboard/payments/PAYMENT_PLAN:UPDATE_REQUIRES_ACTION';
+export const PAYMENT_PLAN_UPDATING = 'dashboard/payments/PAYMENT_PLAN:UPDATING';
+export const PAYMENT_PLAN_UPDATED = 'dashboard/payments/PAYMENT_PLAN:UPDATED';
+export const PAYMENT_PLAN_UPDATE_FAILED =
+  'dashboard/payments/PAYMENT_PLAN:UPDATE_FAILED';
+
+export const PAYMENT_PLAN_GET_PROJECTION =
+  'dashboard/payments/PAYMENT_PLAN:GET_PROJECTION';
+export const PAYMENT_PLAN_GET_PROJECTION_SUCCESS =
+  'dashboard/payments/PAYMENT_PLAN:GET_PROJECTION_SUCCESS';
+export const PAYMENT_PLAN_GET_PROJECTION_FAILED =
+  'dashboard/payments/PAYMENT_PLAN:GET_PROJECTION_FAILED';
+
+export const MAKE_PAYMENT_UPDATING = 'dashboard/payments/MAKE_PAYMENT:UPDATING';
+export const MAKE_PAYMENT_FAILED = 'dashboard/payments/MAKE_PAYMENT:FAILED';
+export const MAKE_PAYMENT_REQUIRES_ACTION =
+  'dashboard/payments/MAKE_PAYMENT:REQUIRES_ACTION';
+export const MAKE_PAYMENT_SUCCESS = 'dashboard/payments/MAKE_PAYMENT:SUCCESS';

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<request api="3.0" source="2">
+    {{#data}}
+    <accommodation_list>
+        {{#accommodations}}
+        <accommodation {{#id}}id="{{id}}"{{/id}} accommodation_id="{{accommodation_id}}" room_id="{{room_id}}" room_type_id="{{room_type_id}}" tier_id="{{tier_id}}" {{#simple}}pax_id="{{pax_id}}"{{/simple}}>
+            <period start_date="{{start_date}}" end_date="{{end_date}}" nights="{{nights}}"/>
+            {{^simple}}
+            <pax_list>
+                {{#pax}}
+                <pax id="{{.}}"/>
+                {{/pax}}
+            </pax_list>
+            {{/simple}}
+        </accommodation>
+        {{/accommodations}}
+    </accommodation_list>
+    {{/data}}
+</request>

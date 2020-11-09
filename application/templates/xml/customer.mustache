@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<request api="3.0" request_uri="customer">
+    {{#data}}
+    <customer type="{{customer_type}}" {{#client_group_id}}client_group="{{client_group_id}}"{{/client_group_id}} {{#organisation_id}}organisation="{{organisation_id}}"{{/organisation_id}}>
+        <email><![CDATA[{{email}}]]></email>
+        {{#password}}<password><![CDATA[{{password}}]]></password>{{/password}}
+        {{#social_media_id}}<social_media_id><![CDATA[{{social_media_id}}]]></social_media_id>{{/social_media_id}}
+        {{#personal_details}}
+        <personal_details {{#sex}}sex="{{sex}}"{{/sex}} {{#gender}}gender="{{gender}}"{{/gender}} {{#date_of_birth}}date_of_birth="{{date_of_birth}}"{{/date_of_birth}}>
+            {{#title}}<title><![CDATA[{{title}}]]></title>{{/title}}
+            <first_name><![CDATA[{{first_name}}]]></first_name>
+            <last_name><![CDATA[{{last_name}}]]></last_name>
+            <telephone><![CDATA[{{telephone}}]]></telephone>
+        </personal_details>
+        {{/personal_details}}
+        {{#address}}
+        <address {{#address_id}}id="{{address_id}}"{{/address_id}} type="{{type_id}}">
+            <address_1><![CDATA[{{address_1}}]]></address_1>
+            {{#address_2}}<address_2><![CDATA[{{address_2}}]]></address_2>{{/address_2}}
+            {{#address_3}}<address_3><![CDATA[{{address_3}}]]></address_3>{{/address_3}}
+            <city><![CDATA[{{city}}]]></city>
+            {{#post_code}}<post_code><![CDATA[{{post_code}}]]></post_code>{{/post_code}}
+            <country id="{{country_id}}" />
+        </address>
+        {{/address}}
+        {{#bank_account}}
+        <bank_account number="{{number}}" sort_code="{{sort_code}}" {{#iban}}iban="{{iban}}"{{/iban}}>
+            <name><![CDATA[{{name}}]]></name>
+        </bank_account>
+        {{/bank_account}}
+        {{#passport}}
+        <passport number="{{number}}" expiry_date="{{expiry_date}}">
+            <first_name><![CDATA[{{first_name}}]]></first_name>
+            <middle_names><![CDATA[{{middle_names}}]]></middle_names>
+            <last_name><![CDATA[{{last_name}}]]></last_name>
+            <country_of_issue code="{{country_code}}" />
+            <nationality><![CDATA[{{nationality}}]]></nationality>
+        </passport>
+        {{/passport}}
+        {{#emergency_contact}}
+        <emergency_contact>
+            <full_name><![CDATA[{{full_name}}]]></full_name>
+            <telephone><![CDATA[{{telephone}}]]></telephone>
+        </emergency_contact>
+        {{/emergency_contact}}
+        {{#ssrs.0}}
+            <ssr_list>
+                {{#ssrs}}
+                    <ssr id="{{.}}" />
+                {{/ssrs}}
+            </ssr_list>
+        {{/ssrs.0}}
+    </customer>
+    {{/data}}
+</request>

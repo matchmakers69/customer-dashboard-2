@@ -1,0 +1,3 @@
+{
+  "extends": "./node_modules/@kaboodle-solutions/frontend-config/stylelint.js"
+}

@@ -1,0 +1,36 @@
+@import '../../styles/styles.scss';
+
+.DetailsListAddressField {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ededed;
+  padding: 1rem;
+  font-size: 1.1rem;
+  line-height: 1.4;
+  color: #4a4a4a;
+
+  &:last-child {
+    border: none;
+  }
+}
+
+.DetailsListAddressField__title {
+  font-weight: bold;
+}
+
+.DetailsListAddressField__value {
+  font-size: 0.9rem;
+}
+
+.DetailsListAddressField__summary,
+.DetailsListAddressField__buttons {
+  width: 100%;
+}
+
+.DetailsListAddressField__buttons {
+  flex-direction: row;
+  align-items: center;
+  text-align: right;
+}

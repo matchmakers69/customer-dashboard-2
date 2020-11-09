@@ -1,0 +1,22 @@
+{
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/kaboodle-solutions/logger.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/kaboodle-solutions/utilities.git"
+        }
+    ],
+    "require": {
+        "bcosca/fatfree-core": "3.7.1",
+        "packmansystems/pmutils": "^1.6.11",
+        "mustache/mustache": "2.12.0",
+        "guzzlehttp/guzzle": "^6.3",
+        "kaboodle/logger": "^0.2.0"
+    },
+    "require-dev": {
+        "doctrine/instantiator": "~1.0"
+    }
+}

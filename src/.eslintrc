@@ -1,0 +1,70 @@
+{
+  "parser": "babel-eslint",
+  "plugins": ["import", "jsx-a11y", "react"],
+  "extends": [
+    "../node_modules/@kaboodle-solutions/frontend-config/eslint/react.js",
+    "../node_modules/@kaboodle-solutions/frontend-config/eslint/babel.js"
+  ],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "overrides": [
+    {
+      "files": ["**/*.{spec,test}.js", "./testing/**/*.js", "setupTests.js"],
+      "extends": [
+        "../node_modules/@kaboodle-solutions/frontend-config/eslint/node.js"
+      ],
+      "env": { "jest": true, "node": true, "browser": true },
+      "rules": {
+        "max-nested-callbacks": ["warn",  3],
+        "max-lines-per-function": "off",
+        "max-lines": "off",
+        "max-statements": ["warn", 21],
+        "camelcase": "off"
+      }
+    },
+    {
+      "files": ["**/*.styles.js"],
+      "rules": {
+        "max-lines-per-function": "off",
+        "id-length": "off"
+      }
+    },
+    {
+      "files": ["**/*.js"],
+      "excludedFiles": [
+        "**/*.{spec,test,styles}.js",
+        "./testing/**/*.js",
+        "setupTests.js"
+      ],
+      "globals": {
+        "process": true
+      },
+      "rules": {
+        "import/no-extraneous-dependencies": [
+          "error",
+          {
+            "devDependencies": [
+              "src/testing/**/*.js",
+              "**/*.{spec,test}.js",
+              "src/setupTests.js"
+            ],
+            "optionalDependencies": false
+          }
+        ],
+        "jsx-a11y/label-has-associated-control": [
+          "warn",
+          {
+            "controlComponents": ["InputField"]
+          }
+        ],
+        "camelcase": "off",
+        "max-nested-callbacks": ["warn", 3],
+        "max-lines-per-function": ["warn", 120],
+        "react/jsx-max-depth": ["warn", { "max": 5 }]
+      }
+    }
+  ]
+}

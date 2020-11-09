@@ -1,0 +1,58 @@
+const payments = [
+  {
+    paid: true,
+    reference: 'TF-0003746323',
+    type: 'Booking',
+    amount: '16.36',
+    date: new Date('2019-12-29 16:31:44'),
+    paymentMethod: '0514',
+    status: 'Stripe: Payment Successful',
+  },
+  {
+    paid: true,
+    reference: 'TF-0003700860',
+    type: 'Booking',
+    amount: '16.36',
+    date: new Date('2019-11-29 16:32:00'),
+    paymentMethod: '0514',
+    status: 'Stripe: Payment Successful',
+  },
+  {
+    paid: true,
+    reference: 'TF-0003658824',
+    type: 'Booking',
+    amount: '-16.36',
+    date: new Date('2019-10-29 16:32:34'),
+    paymentMethod: '0514',
+    status: 'Stripe: Payment Successful',
+  },
+  {
+    paid: false,
+    reference: 'TF-0003628025',
+    type: 'Booking',
+    amount: '16.36',
+    date: new Date('2019-09-29 17:32:27'),
+    paymentMethod: '0514',
+    status: 'Stripe: Payment Unsuccessful',
+  },
+  {
+    paid: true,
+    reference: 'TF-0003602323',
+    type: 'Booking',
+    amount: '16.36',
+    date: new Date('2019-08-29 17:31:01'),
+    paymentMethod: '0514',
+    status: 'Stripe: Payment Successful',
+  },
+  {
+    paid: true,
+    reference: 'TF-0003511090',
+    type: 'Deposit',
+    amount: '36.00',
+    date: new Date('2019-07-29 19:27:24'),
+    paymentMethod: '0514',
+    status: 'Stripe: Payment Successful',
+  },
+];
+
+export default payments;

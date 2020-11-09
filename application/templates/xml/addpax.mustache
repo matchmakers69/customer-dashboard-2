@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<request api="3.0">
+    {{#data}}
+    <pax_list>
+        {{#pax}}
+        <pax type="{{type}}" {{#pax_id}}id="{{pax_id}}"{{/pax_id}} />
+        {{/pax}}
+    </pax_list>
+    {{/data}}
+</request>

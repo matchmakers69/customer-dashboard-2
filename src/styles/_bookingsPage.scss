@@ -1,0 +1,17 @@
+.BookingsPage {
+  .Hello {
+    display: block;
+    min-height: 1.38rem;
+  }
+}
+
+.BookingsSummary {
+  .BookingCard,
+  .WrapLoader {
+    margin-bottom: 1rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

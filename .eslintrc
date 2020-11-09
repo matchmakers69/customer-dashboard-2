@@ -1,0 +1,9 @@
+{
+  "parser": "babel-eslint",
+  "extends": [
+    "./node_modules/@kaboodle-solutions/frontend-config/eslint/node.js"
+  ],
+  "env": {
+    "es6": true
+  }
+}

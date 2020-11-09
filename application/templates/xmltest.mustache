@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<request api="3.0">
+    <accommodation_list>
+        {{#data}}
+        <accommodation id="{{id}}" accommodation_id="{{accomm_id}}" room_id="{{room_id}}" room_type_id="{{room_type_id}}">
+            <period start_date="{{start_date}}" end_date="{{end_date}}" nights="{{nights}}"/>
+            <pax_list>
+                {{#pax}}
+                <pax id="{{.}}"/>
+                {{/pax}}
+            </pax_list>
+        </accommodation>
+        {{/data}}
+    </accommodation_list>
+</request>

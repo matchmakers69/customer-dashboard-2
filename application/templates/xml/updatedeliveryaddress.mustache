@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<request api="3.0" source="3">
+    {{#data}}
+        {{#address}}
+            <address>
+                <type><![CDATA[home]]></type>
+                {{#address_1}}<line1><![CDATA[{{address_1}}]]></line1>{{/address_1}}
+                {{#address_2}}<line2><![CDATA[{{address_2}}]]></line2>{{/address_2}}
+                {{#address_3}}<line3><![CDATA[{{address_3}}]]></line3>{{/address_3}}
+                {{#city}}<city><![CDATA[{{city}}]]></city>{{/city}}
+                {{#county}}<county><![CDATA[{{county}}]]></county>{{/county}}
+                {{#postcode}}<postcode><![CDATA[{{postcode}}]]></postcode>{{/postcode}}
+                {{#country_id}}<country id="{{country_id}}"/>{{/country_id}}
+            </address>
+        {{/address}}
+    {{/data}}
+</request>

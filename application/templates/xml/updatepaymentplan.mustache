@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<request api="3.0">
+    {{#data}}
+    <payment_plan>
+        <plan {{#payment_day}}payment_day="{{payment_day}}"{{/payment_day}}/>
+        {{#intent_id}}<payment_intent><![CDATA[{{intent_id}}]]></payment_intent>{{/intent_id}}
+        {{#id}}<payment_method><![CDATA[{{id}}]]></payment_method>{{/id}}
+        <card number="{{card_number}}">
+            <cardholder_name><![CDATA[{{cardholder_name}}]]></cardholder_name>
+        </card>
+    </payment_plan>
+    {{/data}}
+</request>

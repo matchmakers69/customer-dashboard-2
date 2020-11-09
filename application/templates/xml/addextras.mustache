@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<request api="3.0" source="2">
+    {{#data}}
+    <extra_list>
+        {{#extras}}
+        <extra extra_id="{{extra_id}}" pax_id="{{pax_id}}">
+            <group id="{{group_id}}" />
+            <option id="{{option_id}}" />
+            {{#other_information}}<other_information><![CDATA[{{{other_information}}}]]></other_information>{{/other_information}}
+        </extra>
+        {{/extras}}
+    </extra_list>
+    {{/data}}
+</request>
